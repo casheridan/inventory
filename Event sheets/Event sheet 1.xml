@@ -1,0 +1,223 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Event sheet 1</name>
+    <events>
+        <variable constant="0" name="Walking" sid="603515616392099" static="0" type="number">0</variable>
+        <variable constant="0" name="Running" sid="469881724474997" static="0" type="number">0</variable>
+        <variable constant="0" name="Stamina" sid="985723577707819" static="0" type="number">100</variable>
+        <event-block sid="238607371061439">
+            <conditions>
+                <condition id="2" name="Key is down" sid="471496047985568" type="Keyboard">
+                    <param id="0" name="Key">68 (D)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="8Direction" id="7" name="Simulate control" sid="258720743757025" type="Sprite">
+                    <param id="0" name="Control">1</param>
+                </action>
+                <action behavior="8Direction" id="9" name="Set vector X" sid="398162711039782" type="Sprite">
+                    <param id="0" name="Vector X">50</param>
+                </action>
+                <action id="-9" name="Set value" sid="480991172233350" type="System">
+                    <param id="0" name="Variable">Running</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="351411224105897">
+            <conditions>
+                <condition id="2" name="Key is down" sid="837192870062074" type="Keyboard">
+                    <param id="0" name="Key">65 (A)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="8Direction" id="7" name="Simulate control" sid="124127592205268" type="Sprite">
+                    <param id="0" name="Control">0</param>
+                </action>
+                <action behavior="8Direction" id="9" name="Set vector X" sid="759256915834700" type="Sprite">
+                    <param id="0" name="Vector X">-50</param>
+                </action>
+                <action id="-9" name="Set value" sid="178457062254954" type="System">
+                    <param id="0" name="Variable">Running</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="512622684699830">
+            <conditions>
+                <condition id="2" name="Key is down" sid="351222264304917" type="Keyboard">
+                    <param id="0" name="Key">87 (W)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="8Direction" id="7" name="Simulate control" sid="652816562840135" type="Sprite">
+                    <param id="0" name="Control">2</param>
+                </action>
+                <action behavior="8Direction" id="10" name="Set vector Y" sid="187483427304943" type="Sprite">
+                    <param id="0" name="Vector Y">-50</param>
+                </action>
+                <action id="-9" name="Set value" sid="235678819407230" type="System">
+                    <param id="0" name="Variable">Running</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="547806016581299">
+            <conditions>
+                <condition id="2" name="Key is down" sid="689738304401995" type="Keyboard">
+                    <param id="0" name="Key">83 (S)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="8Direction" id="7" name="Simulate control" sid="718454662592760" type="Sprite">
+                    <param id="0" name="Control">3</param>
+                </action>
+                <action behavior="8Direction" id="10" name="Set vector Y" sid="639231910408161" type="Sprite">
+                    <param id="0" name="Vector Y">50</param>
+                </action>
+                <action id="-9" name="Set value" sid="175848584404616" type="System">
+                    <param id="0" name="Variable">Running</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="447400909749305">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="835580805733347" type="System" />
+            </conditions>
+            <actions>
+                <action id="-6" name="Set height" sid="855003410461506" type="Sprite3">
+                    <param id="0" name="Height">Stamina</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="323156175764617">
+            <conditions>
+                <condition id="2" name="Key is down" sid="959110511765917" type="Keyboard">
+                    <param id="0" name="Key">16 (Shift)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-11" name="Subtract from" sid="674391044458072" type="System">
+                    <param id="0" name="Variable">Stamina</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="352698730962038">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="977415459712953" type="System" />
+            </conditions>
+            <actions>
+                <action id="-22" name="Set angle toward position" sid="879251481472508" type="Sprite">
+                    <param id="0" name="X">Mouse.X</param>
+                    <param id="1" name="Y">Mouse.Y</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="955729764572636">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="270014432524440" type="System">
+                    <param id="0" name="Variable">Stamina</param>
+                    <param id="1" name="Comparison">3</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="754241385648082" type="System">
+                    <param id="0" name="Variable">Stamina</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="431652987902080">
+            <conditions>
+                <condition id="-6" name="Every X seconds" sid="665238742514675" type="System">
+                    <param id="0" name="Interval (seconds)">1.0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-10" name="Add to" sid="256629184366913" type="System">
+                    <param id="0" name="Variable">Stamina</param>
+                    <param id="1" name="Value">10</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="331062366226739">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="502350174437433" type="System">
+                    <param id="0" name="Variable">Stamina</param>
+                    <param id="1" name="Comparison">5</param>
+                    <param id="2" name="Value">100</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="181884596564255" type="System">
+                    <param id="0" name="Variable">Stamina</param>
+                    <param id="1" name="Value">100</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="758989627290595">
+            <conditions>
+                <condition id="2" name="Key is down" sid="882377450688866" type="Keyboard">
+                    <param id="0" name="Key">16 (Shift)</param>
+                </condition>
+                <condition id="2" name="Key is down" sid="333987033026080" type="Keyboard">
+                    <param id="0" name="Key">83 (S)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="8Direction" id="10" name="Set vector Y" sid="302877618411726" type="Sprite">
+                    <param id="0" name="Vector Y">100</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="901169451412788">
+            <conditions>
+                <condition id="2" name="Key is down" sid="460989871738532" type="Keyboard">
+                    <param id="0" name="Key">16 (Shift)</param>
+                </condition>
+                <condition id="2" name="Key is down" sid="711501229446864" type="Keyboard">
+                    <param id="0" name="Key">87 (W)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="8Direction" id="10" name="Set vector Y" sid="268188282429365" type="Sprite">
+                    <param id="0" name="Vector Y">-100</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="576963617008852">
+            <conditions>
+                <condition id="2" name="Key is down" sid="750603350031193" type="Keyboard">
+                    <param id="0" name="Key">16 (Shift)</param>
+                </condition>
+                <condition id="2" name="Key is down" sid="478395406006875" type="Keyboard">
+                    <param id="0" name="Key">68 (D)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="8Direction" id="9" name="Set vector X" sid="223752099396994" type="Sprite">
+                    <param id="0" name="Vector X">100</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="298237308738277">
+            <conditions>
+                <condition id="2" name="Key is down" sid="863275755656350" type="Keyboard">
+                    <param id="0" name="Key">16 (Shift)</param>
+                </condition>
+                <condition id="2" name="Key is down" sid="147911827744391" type="Keyboard">
+                    <param id="0" name="Key">65 (A)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="8Direction" id="9" name="Set vector X" sid="182836438633967" type="Sprite">
+                    <param id="0" name="Vector X">-100</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>
